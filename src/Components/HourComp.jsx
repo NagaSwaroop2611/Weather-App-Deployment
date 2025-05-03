@@ -18,14 +18,14 @@ export default function HourComp({currentTime,data}) {
           width={48}
           height={48}
         />
-        <p className='label-18'>{Math.floor(data?.values?.temperature2m)}℃</p>
+        <p className='label-18'>{Math.floor(data?.values?.temperature2m)} ℃</p>
         <img src={
           Math.floor(data?.values?.windDirection10m) < 90 ||
           Math.floor(data?.values?.windDirection10m) > 270 ? ArrowRight :
-            Math.floor(data?.values?.windDirection10m) > 90 ||
-            Math.floor(data?.values?.windDirection10m) < 270  
-            ? ArrowLeft
-            : ArrowStraight
+          Math.floor(data?.values?.windDirection10m) > 90 ||
+          Math.floor(data?.values?.windDirection10m) < 270  
+          ? ArrowLeft
+          : ArrowStraight
         } alt="" />
         <p className='label-18'>
           {Math.floor(data?.values?.windSpeed)} km/h

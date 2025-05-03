@@ -238,11 +238,11 @@ export default function App() {
             fetchWeather(location.lat,location.lon);
           })
         }
-        // ,
-        // (error) => {
-        //   console.error('Error getting location:', error.message);
-        //   fetchWeather();
-        // }
+        ,
+        (error) => {
+          console.error('Error getting location:', error.message);
+          fetchWeather();
+        }
       ));
     }
     else{
